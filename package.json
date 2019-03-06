@@ -1,6 +1,6 @@
 {
   "name": "react-native-android-spinners",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A new collection of animated loading indicators for Android in React Native",
   "main": "index.js",
   "keywords": [
