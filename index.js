@@ -9,9 +9,9 @@ var {
 	View
 } = ReactNative;
 
-var RNSpinners = null;
+var RNAndroidSpinners = null;
 
-class RNSpinners extends React.Component {
+class Spinners extends React.Component {
 
 	static propTypes = {
 		type: PropTypes.string,
@@ -54,7 +54,7 @@ class RNSpinners extends React.Component {
 		var colorNumber = processColor(this.props.color);
 
 		return (
-			<RNSpinners
+			<RNAndroidSpinners
 				type={String(this.props.type)}
 				size={parseInt(this.props.size)}
 				color={colorNumber}
@@ -66,12 +66,12 @@ class RNSpinners extends React.Component {
 
 // Since RNPM does not recognize `requireNativeComponent`, so we have to
 // add this line, and RNPM will link native modules automatically
-NativeModules.RNSpinners;
+NativeModules.RNAndroidSpinners;
 
 // Native component
-RNSpinners = requireNativeComponent(
-	'RNSpinners',
-	RNSpinners,
+RNAndroidSpinners = requireNativeComponent(
+	'RNAndroidSpinners',
+	Spinners,
     {
         nativeOnly: {
             'nativeID': true
@@ -80,4 +80,4 @@ RNSpinners = requireNativeComponent(
 );
 
 
-module.exports = RNSpinners;
+module.exports = Spinners;
